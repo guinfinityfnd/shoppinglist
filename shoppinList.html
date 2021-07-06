@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bfc3ef21f1.js" crossorigin="anonymous"></script>
+    <title>ShoppingList</title>
+    <style>
+        body{
+            background-color: grey;
+            background-attachment: fixed;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .Types{
+            width: 300px;
+            padding-left: 20px;
+            height: 30px;
+            font-size: 20px;
+            background: rgb(19, 8, 8);
+            color:#fff;
+            outline: none;
+            border-radius: 6px;
+        }
+        ::placeholder{
+            text-align: center;
+        }
+        .product{
+            background-color: #ffffff;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 5px;
+            cursor: pointer;
+            user-select: none;
+            display: inline;
+            text-align: center;
+        }
+        .product:hover{
+            background-color: greenyellow;
+            color: black;
+        }
+        .purchased{
+            text-decoration: line-through;
+            color: red;
+        }
+        .fa-trash-alt{
+            margin-left:15px;
+            cursor: pointer;
+        }
+        .fa-trash-alt:hover{
+            color: greenyellow;
+        }
+        .orderLists{
+            margin-top: 20px;
+        }
+        .productcontainer{
+            margin-bottom: 15px;
+        }
+        @media only screen and (max-width:800px) {
+            body{
+                background-color: tomato;
+            }
+            .Types{
+                width: 50%;
+            }
+            ::placeholder{
+                color: yellow;                
+            }
+            .purchased{
+                color: red;
+            }
+            #btn-add{
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+        }         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="List Here!" class="Types">
+            <div class="orderLists"></div>
+    </div>
+   
+    <!-- <div>
+        <a href="tel:+09760568931">+09760568931</a>
+    </div> -->
+    <script src="shoppingList.js"></script>
+</body>
+</html>
